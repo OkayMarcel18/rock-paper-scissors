@@ -25,8 +25,25 @@
         
         console.log(getComputerChoice());
 
+        const gamePrompt = document.querySelector("#signButton");
+        const log = document.querySelector("#log");
+
+        gamePrompt.addEventListener("click", () => {
+            let sign = prompt("What's your choice?");
+
+            if (sign === null) {
+                log.innerText = "That's invalid!";
+            } else if (sign.toLowerCase() === "") {
+                log.innerText = "";
+            }
+        })
+
         function getHumanChoice() {
-            
+            let humanChoices = ["rock", "paper", "scissors"];
+
+            if (humanChoices === "rock" && compChoices === 1) {
+                return "It's a tie!"
+            }
         }
 
     </script>
