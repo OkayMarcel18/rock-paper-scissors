@@ -28,9 +28,35 @@
 
         function getHumanChoice() {
             let humanChoices = ["rock", "paper", "scissors"];
+            const signButton = document.querySelector("#signButton");
+            const log = document.querySelector("#log");
 
+            signButton.addEventListener("click", () => {
+                let sign = prompt("Play");
+
+            if (humanChoices === null) {
+                log.innerText = "Okay, maybe later.";
+            } else if (sign.toLowerCase() === "") {
+                log.innerText = "Enter your choice.";
+            } else if (sign.toLowerCase() === "rock" && compChoices === 1) {
+                log.innerText = "It's a tie!";
+            } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "rock" && compChoices === 3) {
+                log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
+                log.innerText = "You won!";
+            }
+            })
+
+            // This is for the playGame function later!
+        
             if (humanChoices === "rock" && compChoices === 1) {
                 return "It's a tie!"
+            } else if (humanChoices === "rock" && compChoices === 2) {
+                return "You win!"
+            } else if (humanChoices === "rock" && compChoices === 3) {
+                return "You lose!"
             }
         }
 
