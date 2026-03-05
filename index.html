@@ -6,7 +6,9 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button id="signButton">Rock, paper, or scissors?</button>
+    <h2>Rock Paper Scissors</h2>
+    <p>Press F12 and click "Play" to begin.</p>
+    <button id="signButton">Play</button>
     <pre id="log"></pre>
     <script>
         console.log("Hellow World");
@@ -46,6 +48,16 @@
                 log.innerText = "You won!";
             } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
                 log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 2) {
+                log.innerText = "It's a tie!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 3) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 1) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 2) {
+                log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 3) {
+                log.innerText = "It's a tie!";
             }
             })
 
