@@ -12,6 +12,8 @@
     <pre id="log"></pre>
     <script>
         console.log("Hellow World");
+        
+        let compChoices;
 
         function getComputerChoice() {
             let compChoices = ["rock", "paper", "scissors"];
@@ -38,41 +40,35 @@
 
                 if (sign === null) {
                     log.innerText = "Okay, maybe later.";
-                } else if (sign.toLowerCase() === "") {
+                } else if (!sign || sign.trim() === "") {
                     log.innerText = "Enter your choice.";
-                } else if (sign.toLowerCase() === "rock" && compChoices === 1) {
-                    log.innerText = "It's a tie!";
-                } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
-                    log.innerText = "You lost!";
-                } else if (sign.toLowerCase() === "rock" && compChoices === 3) {
-                    log.innerText = "You won!";
-                } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
-                    log.innerText = "You won!";
-                } else if (sign.toLowerCase() === "paper" && compChoices === 2) {
-                    log.innerText = "It's a tie!";
-                } else if (sign.toLowerCase() === "paper" && compChoices === 3) {
-                    log.innerText = "You lost!";
-                } else if (sign.toLowerCase() === "scissors" && compChoices === 1) {
-                    log.innerText = "You lost!";
-                } else if (sign.toLowerCase() === "scissors" && compChoices === 2) {
-                    log.innerText = "You won!";
-                } else if (sign.toLowerCase() === "scissors" && compChoices === 3) {
-                    log.innerText = "It's a tie!";
                 } else {
-                    log.innerText = "Don't be shy!";
+                    sign = sign.toLowerCase();
                 }
-            });
+                    if (sign.toLowerCase() === "rock" && compChoices === 1) {
+                        log.innerText = "It's a tie!";
+                    } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
+                        log.innerText = "You lost!";
+                    } else if (sign.toLowerCase() === "rock" && compChoices === 3) {
+                        log.innerText = "You won!";
+                    } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
+                        log.innerText = "You won!";
+                    } else if (sign.toLowerCase() === "paper" && compChoices === 2) {
+                        log.innerText = "It's a tie!";
+                    } else if (sign.toLowerCase() === "paper" && compChoices === 3) {
+                        log.innerText = "You lost!";
+                    } else if (sign.toLowerCase() === "scissors" && compChoices === 1) {
+                        log.innerText = "You lost!";
+                    } else if (sign.toLowerCase() === "scissors" && compChoices === 2) {
+                        log.innerText = "You won!";
+                    } else if (sign.toLowerCase() === "scissors" && compChoices === 3) {
+                        log.innerText = "It's a tie!";
+                    } else {
+                        log.innerText = "Invalid choice. Try rock, paper, or scissors.";
+                    }
+                }
+            )};
 
-            // This is for the playGame function later!
-        
-            if (humanChoices === "rock" && compChoices === 1) {
-                return "It's a tie!"
-            } else if (humanChoices === "rock" && compChoices === 2) {
-                return "You win!"
-            } else if (humanChoices === "rock" && compChoices === 3) {
-                return "You lose!"
-            }
-        }
 
     </script>
 
