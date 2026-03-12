@@ -45,29 +45,32 @@
                 } else {
                     sign = sign.toLowerCase();
                 }
-                    if (sign.toLowerCase() === "rock" && compChoices === 1) {
-                        log.innerText = "It's a tie!";
-                    } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
-                        log.innerText = "You lost!";
-                    } else if (sign.toLowerCase() === "rock" && compChoices === 3) {
-                        log.innerText = "You won!";
-                    } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
-                        log.innerText = "You won!";
-                    } else if (sign.toLowerCase() === "paper" && compChoices === 2) {
-                        log.innerText = "It's a tie!";
-                    } else if (sign.toLowerCase() === "paper" && compChoices === 3) {
-                        log.innerText = "You lost!";
-                    } else if (sign.toLowerCase() === "scissors" && compChoices === 1) {
-                        log.innerText = "You lost!";
-                    } else if (sign.toLowerCase() === "scissors" && compChoices === 2) {
-                        log.innerText = "You won!";
-                    } else if (sign.toLowerCase() === "scissors" && compChoices === 3) {
-                        log.innerText = "It's a tie!";
-                    } else {
-                        log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                    }
-                }
-            )};
+        
+// I believe this is the play round code. Double check in debugging! //
+
+            if (sign.toLowerCase() === "rock" && compChoices === 1) {
+                log.innerText = "It's a tie!";
+            } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "rock" && compChoices === 3) {
+                log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 1) {
+                log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 2) {
+                log.innerText = "It's a tie!";
+            } else if (sign.toLowerCase() === "paper" && compChoices === 3) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 1) {
+                log.innerText = "You lost!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 2) {
+                log.innerText = "You won!";
+            } else if (sign.toLowerCase() === "scissors" && compChoices === 3) {
+                log.innerText = "It's a tie!";
+            } else {
+                log.innerText = "Invalid choice. Try rock, paper, or scissors.";
+            }
+        }
+    )};
 
 
     </script>
