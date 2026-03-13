@@ -12,8 +12,6 @@
     <pre id="log"></pre>
     <script>
         console.log("Hellow World");
-        
-        let compChoices;
 
         function getComputerChoice() {
             let compChoices = ["rock", "paper", "scissors"];
@@ -36,10 +34,10 @@
             const log = document.querySelector("#log");
 
             signButton.addEventListener("click", () => {
-                let sign = prompt("Rock, paper, or scissors?");
+                let sign = prompt("rock, paper, or scissors?");
 
                 if (sign === null) {
-                    log.innerText = "Okay, maybe later.";
+                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
                 } else if (!sign || sign.trim() === "") {
                     log.innerText = "Enter your choice.";
                 } else {
@@ -50,8 +48,12 @@
 
         console.log(getHumanChoice());
 
+        let humanScore = 0;
+        let computerScore = 0;
+
         // I believe this is the play round code. Double check in debugging! //
 
+        function playRound(humanChoice, computerChoice) {
             if (sign.toLowerCase() === "rock" && compChoices === 1) {
                 log.innerText = "It's a tie!";
             } else if (sign.toLowerCase() === "rock" && compChoices === 2) {
@@ -73,7 +75,12 @@
             } else {
                 log.innerText = "Invalid choice. Try rock, paper, or scissors.";
             }
+        }
 
+        const humanSelection =  getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
     </script>
 
 </body>
