@@ -36,7 +36,7 @@
             const log = document.querySelector("#log");
 
             signButton.addEventListener("click", () => {
-                let sign = prompt("Play");
+                let sign = prompt("Rock, paper, or scissors?");
 
                 if (sign === null) {
                     log.innerText = "Okay, maybe later.";
@@ -47,6 +47,8 @@
                 }
             }
         )};
+
+        console.log(getHumanChoice());
 
         // I believe this is the play round code. Double check in debugging! //
 
