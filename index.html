@@ -52,17 +52,17 @@
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if ((humanChoices() === "rock" && compChoices === 1) || 
-                (humanChoices() === "paper" && compChoices === 2) || 
-                (humanChoices() === "scissors" && compChoices === 3)) {
+            if ((sign.toLowerCase() === "rock" && compChoices === 1) || 
+                (sign.toLowerCase() === "paper" && compChoices === 2) || 
+                (sign.toLowerCase() === "scissors" && compChoices === 3)) {
                 log.innerText = "It's a tie!";
-            } else if ((humanChoices() === "rock" && compChoices === 2) || 
-                       (humanChoices() === "paper" && compChoices === 3) || 
-                       (humanChoices() === "scissors" && compChoices === 1)) {
+            } else if ((sign.toLowerCase() === "rock" && compChoices === 2) || 
+                       (sign.toLowerCase() === "paper" && compChoices === 3) || 
+                       (sign.toLowerCase() === "scissors" && compChoices === 1)) {
                 log.innerText = "You lost!";
-            } else if ((humanChoices() === "rock" && compChoices === 3) || 
-                       (humanChoices() === "paper" && compChoices === 1) || 
-                       (humanChoices() === "scissors" && compChoices === 2)) {
+            } else if ((sign.toLowerCase() === "rock" && compChoices === 3) || 
+                       (sign.toLowerCase() === "paper" && compChoices === 1) || 
+                       (sign.toLowerCase() === "scissors" && compChoices === 2)) {
                 log.innerText = "You won!";
             } else {
                 log.innerText = "";
