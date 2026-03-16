@@ -28,8 +28,9 @@
         
         console.log(getComputerChoice());
 
+        let humanChoices = ["rock", "paper", "scissors"];
+
         function getHumanChoice() {
-            let humanChoices = ["rock", "paper", "scissors"];
             const signButton = document.querySelector("#signButton");
             const log = document.querySelector("#log");
 
@@ -52,18 +53,20 @@
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if ((sign.toLowerCase() === "rock" && compChoices === 1) || 
-                (sign.toLowerCase() === "paper" && compChoices === 2) || 
-                (sign.toLowerCase() === "scissors" && compChoices === 3)) {
+            if ((humanChoices === "rock" && compChoices === 1) || 
+                (humanChoices === "paper" && compChoices === 2) || 
+                (humanChoices === "scissors" && compChoices === 3)) {
                 log.innerText = "It's a tie!";
-            } else if ((sign.toLowerCase() === "rock" && compChoices === 2) || 
-                       (sign.toLowerCase() === "paper" && compChoices === 3) || 
-                       (sign.toLowerCase() === "scissors" && compChoices === 1)) {
-                log.innerText = "You lost!";
-            } else if ((sign.toLowerCase() === "rock" && compChoices === 3) || 
-                       (sign.toLowerCase() === "paper" && compChoices === 1) || 
-                       (sign.toLowerCase() === "scissors" && compChoices === 2)) {
-                log.innerText = "You won!";
+            } else if ((humanChoices === "rock" && compChoices === 2) || 
+                       (humanChoices === "paper" && compChoices === 3) || 
+                       (humanChoices === "scissors" && compChoices === 1)) {
+                        let computerScore = computerScore + 1;
+                        log.innerText = "You lost!";
+            } else if ((humanChoices === "rock" && compChoices === 3) || 
+                       (humanChoices === "paper" && compChoices === 1) || 
+                       (humanChoices === "scissors" && compChoices === 2)) {
+                        let humanScore = humanScore + 1;
+                        log.innerText = "You won!";
             } else {
                 log.innerText = "";
             }
