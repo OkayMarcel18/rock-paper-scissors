@@ -11,7 +11,7 @@
     <button id="signButton">Play</button>
     <pre id="log"></pre>
     <script>
-        console.log("Hellow World");
+        console.log("Hello World");
 
         function getComputerChoice() {
             let compChoices = ["rock", "paper", "scissors"];
@@ -44,29 +44,27 @@
                 } else {
                     sign = sign.toLowerCase();
                 }
-            }
-        )};
-
-        console.log(getHumanChoice());
+            });
+        }
 
         let humanScore = 0;
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if ((humanChoices === "rock" && compChoices === 1) || 
-                (humanChoices === "paper" && compChoices === 2) || 
-                (humanChoices === "scissors" && compChoices === 3)) {
-                log.innerText = "It's a tie!";
-            } else if ((humanChoices === "rock" && compChoices === 2) || 
-                       (humanChoices === "paper" && compChoices === 3) || 
-                       (humanChoices === "scissors" && compChoices === 1)) {
-                        let computerScore = computerScore + 1;
-                        log.innerText = "You lost!";
-            } else if ((humanChoices === "rock" && compChoices === 3) || 
-                       (humanChoices === "paper" && compChoices === 1) || 
-                       (humanChoices === "scissors" && compChoices === 2)) {
-                        let humanScore = humanScore + 1;
-                        log.innerText = "You won!";
+            if ((humanChoices === "rock" && compChoices === "rock") || 
+                (humanChoices === "paper" && compChoices === "paper") || 
+                (humanChoices === "scissors" && compChoices === "scissors")) {
+                console.log("It's a tie!");
+            } else if ((humanChoices === "rock" && compChoices === "paper") || 
+                       (humanChoices === "paper" && compChoices === "scissors") || 
+                       (humanChoices === "scissors" && compChoices === "rock")) {
+                        computerScore = computerScore + 1;
+                        console.log("You lost!");
+            } else if ((humanChoices === "rock" && compChoices === "scissors") || 
+                       (humanChoices === "paper" && compChoices === "rock") || 
+                       (humanChoices === "scissors" && compChoices === "paper")) {
+                        humanScore = humanScore + 1;
+                        console.log("You won!");
             } else {
                 log.innerText = "";
             }
