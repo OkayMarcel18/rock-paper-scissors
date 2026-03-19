@@ -55,9 +55,12 @@
                 
                 let humanChoice = sign;
                 log.innerText = `You chose ${sign}.`
-            });
+                resolve(sign);
+            }, { once: true });
         }
 
+        console.log(getHumanChoice());
+        
         let humanScore = 0;
         let computerScore = 0;
 
