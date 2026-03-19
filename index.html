@@ -19,16 +19,20 @@
 
             if (randomizeChoice === 1) {
                 return "rock";
+                let computerChoice = "rock";
             } if (randomizeChoice === 2) {
                 return "paper";
+                let computerChoice = "paper";
             } if (randomizeChoice === 3) {
                 return "scissors";
+                let computerChoice = "scissors";
             }
         }
         
         console.log(getComputerChoice());
 
-        let humanChoices = ["rock", "paper", "scissors"];
+        const humanChoices = ["rock", "paper", "scissors"];
+        let humanChoice = null;
 
         function getHumanChoice() {
             const signButton = document.querySelector("#signButton");
@@ -39,11 +43,18 @@
 
                 if (sign === null) {
                     log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                } else if (!sign || sign.trim() === "") {
-                    log.innerText = "Enter your choice.";
-                } else {
-                    sign = sign.toLowerCase();
+                    return;
+                } 
+                
+                sign = sign.toLowerCase().trim();
+                
+                if (!humanChoices.includes(sign)) {
+                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
+                    return;
                 }
+                
+                let humanChoice = sign;
+                log.innerText = `You chose ${sign}.`
             });
         }
 
@@ -51,20 +62,20 @@
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if ((humanChoices === "rock" && compChoices === "rock") || 
-                (humanChoices === "paper" && compChoices === "paper") || 
-                (humanChoices === "scissors" && compChoices === "scissors")) {
-                console.log("It's a tie!");
-            } else if ((humanChoices === "rock" && compChoices === "paper") || 
-                       (humanChoices === "paper" && compChoices === "scissors") || 
-                       (humanChoices === "scissors" && compChoices === "rock")) {
-                        computerScore = computerScore + 1;
-                        console.log("You lost!");
-            } else if ((humanChoices === "rock" && compChoices === "scissors") || 
-                       (humanChoices === "paper" && compChoices === "rock") || 
-                       (humanChoices === "scissors" && compChoices === "paper")) {
-                        humanScore = humanScore + 1;
-                        console.log("You won!");
+            if ((humanChoice === "rock" && computerChoice === "rock") || 
+                (humanChoice === "paper" && computerChoice === "paper") || 
+                (humanChoice === "scissors" && computerChoice === "scissors")) {
+                    return "It's a tie!";
+            } else if ((humanChoice === "rock" && computerChoice === "paper") || 
+                       (humanChoice === "paper" && computerChoice === "scissors") || 
+                       (humanChoice === "scissors" && computerChoice === "rock")) {
+                            computerScore = computerScore + 1;
+                            return "You lost!";
+            } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
+                       (humanChoice === "paper" && computerChoice === "rock") || 
+                       (humanChoice === "scissors" && computerChoice === "paper")) {
+                            humanScore = humanScore + 1;
+                            return "You won!";
             } else {
                 log.innerText = "";
             }
