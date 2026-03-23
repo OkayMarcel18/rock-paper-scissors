@@ -63,7 +63,11 @@
         let humanScore = 0;
         let computerScore = 0;
 
-        function playRound(humanChoice, computerChoice) {
+        // This playRound function doesn't work. I need to rewrite this and ensure //
+        // it fires after the event listener click. *note, this may be becuase //
+        // there is no function playGame. //
+
+        function playRound(HumanChoice, ComputerChoice) {
             if ((humanChoice === "rock" && computerChoice === "rock") || 
                 (humanChoice === "paper" && computerChoice === "paper") || 
                 (humanChoice === "scissors" && computerChoice === "scissors")) {
@@ -72,12 +76,12 @@
                        (humanChoice === "paper" && computerChoice === "scissors") || 
                        (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore = computerScore + 1;
-                            return "You lost!";
+                            return "You lost! ${computerChoice} beats ${humanChoice}.";
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
                        (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore = humanScore + 1;
-                            return "You won!";
+                            return "You won! ${humanChoice} beats ${computerChoice}.";
             } else {
                 log.innerText = "";
             }
@@ -87,6 +91,10 @@
         const computerSelection = getComputerChoice();
 
         playRound(humanSelection, computerSelection);
+
+        function playGame() {
+            
+        }
 
     </script>
 
