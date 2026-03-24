@@ -73,12 +73,12 @@
                        (humanChoice === "paper" && computerChoice === "scissors") || 
                        (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore = computerScore + 1;
-                            log.innerText = "You lost! ${computerChoice} beats ${humanChoice}.";
+                            log.innerText = `You lost! ${computerChoice} beats ${humanChoice}.`;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
                        (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore = humanScore + 1;
-                            log.innerText = "You won! ${humanChoice} beats ${computerChoice}.";
+                            log.innerText = `You won! ${humanChoice} beats ${computerChoice}.`;
             } else {
                 log.innerText = "";
             }
@@ -94,6 +94,7 @@
             let humanScore = 0
             
             playRound(humanSelection, computerSelection);
+
         }
 
     </script>
