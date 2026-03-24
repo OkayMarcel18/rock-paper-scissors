@@ -13,53 +13,14 @@
     <script>
         console.log("Hello World");
 
-        const compChoices = ["rock", "paper", "scissors"];
-
         function getComputerChoice() {
-            let randomizeChoice = Math.floor(Math.random() * compChoices.length) + 1;
-
-            if (randomizeChoice === 1) {
-                return "rock";
-                let computerChoice = "rock";
-            } if (randomizeChoice === 2) {
-                return "paper";
-                let computerChoice = "paper";
-            } if (randomizeChoice === 3) {
-                return "scissors";
-                let computerChoice = "scissors";
+            const choices = ["rock", "paper", "scissors"];
             }
-        }
-        
-        console.log(getComputerChoice());
-
-        const humanChoices = ["rock", "paper", "scissors"];
-        let humanChoice = null;
 
         function getHumanChoice() {
-            const signButton = document.querySelector("#signButton");
-            const log = document.querySelector("#log");
-
-            signButton.addEventListener("click", () => {
-                let sign = prompt("rock, paper, or scissors?");
-
-                if (sign === null) {
-                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                    return;
-                } 
-                
-                sign = sign.toLowerCase().trim();
-                
-                if (!humanChoices.includes(sign)) {
-                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                    return;
-                }
-                
-                let humanChoice = sign;
-                log.innerText = `You chose ${sign}.`
-                console.log(humanChoice);
-
-            });
+            return prompt("rock, paper, or scissors").toLowerCase().trim();
         }
+        
         
         let humanScore = 0;
         let computerScore = 0;
@@ -84,18 +45,22 @@
             }
         }
 
-        const humanSelection =  getHumanChoice();
-        const computerSelection = getComputerChoice();
-
-        playRound(humanSelection, computerSelection);
+        
+        playRound(humanChoice, computerChoice);
 
         function playGame() {
+            document.getElementByID("signButton").addEventListener("click", () => {
+                const humanChoice = getHumanChoice();
+                const computerChoice = getComputerChoice();
+                playRound(humanChoice, computerChoice); 
+            });
+
             let computerScore = 0
             let humanScore = 0
-            
-            playRound(humanSelection, computerSelection);
-
+           
         }
+
+        
 
     </script>
 
