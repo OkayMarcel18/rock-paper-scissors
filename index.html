@@ -68,18 +68,18 @@
         // there is no function playGame. //
 
         function playRound(HumanChoice, ComputerChoice) {
-            if ((humanSelection === "rock" && computerSelection === "rock") || 
-                (humanSelection === "paper" && computerSelection === "paper") || 
-                (humanSelection === "scissors" && computerSelection === "scissors")) {
+            if ((humanChoice === "rock" && computerChoice === "rock") || 
+                (humanChoice === "paper" && computerChoice === "paper") || 
+                (humanChoice === "scissors" && computerChoice === "scissors")) {
                     return "It's a tie!";
-            } else if ((humanSelection === "rock" && computerSelection === "paper") || 
-                       (humanSelection === "paper" && computerSelection === "scissors") || 
-                       (humanSelection === "scissors" && computerSelection === "rock")) {
+            } else if ((humanChoice === "rock" && computerChoice === "paper") || 
+                       (humanChoice === "paper" && computerChoice === "scissors") || 
+                       (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore = computerScore + 1;
                             return "You lost! ${computerChoice} beats ${humanChoice}.";
-            } else if ((humanSelection === "rock" && computerSelection === "scissors") || 
-                       (humanSelection === "paper" && computerSelection === "rock") || 
-                       (humanSelection === "scissors" && computerSelection === "paper")) {
+            } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
+                       (humanChoice === "paper" && computerChoice === "rock") || 
+                       (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore = humanScore + 1;
                             return "You won! ${humanChoice} beats ${computerChoice}.";
             } else {
