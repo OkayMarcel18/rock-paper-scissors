@@ -68,18 +68,18 @@
         // there is no function playGame. //
 
         function playRound(HumanChoice, ComputerChoice) {
-            if ((humanChoice === "rock" && computerChoice === "rock") || 
-                (humanChoice === "paper" && computerChoice === "paper") || 
-                (humanChoice === "scissors" && computerChoice === "scissors")) {
+            if ((humanSelection === "rock" && computerSelection === "rock") || 
+                (humanSelection === "paper" && computerSelection === "paper") || 
+                (humanSelection === "scissors" && computerSelection === "scissors")) {
                     return "It's a tie!";
-            } else if ((humanChoice === "rock" && computerChoice === "paper") || 
-                       (humanChoice === "paper" && computerChoice === "scissors") || 
-                       (humanChoice === "scissors" && computerChoice === "rock")) {
+            } else if ((humanSelection === "rock" && computerSelection === "paper") || 
+                       (humanSelection === "paper" && computerSelection === "scissors") || 
+                       (humanSelection === "scissors" && computerSelection === "rock")) {
                             computerScore = computerScore + 1;
                             return "You lost! ${computerChoice} beats ${humanChoice}.";
-            } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
-                       (humanChoice === "paper" && computerChoice === "rock") || 
-                       (humanChoice === "scissors" && computerChoice === "paper")) {
+            } else if ((humanSelection === "rock" && computerSelection === "scissors") || 
+                       (humanSelection === "paper" && computerSelection === "rock") || 
+                       (humanSelection === "scissors" && computerSelection === "paper")) {
                             humanScore = humanScore + 1;
                             return "You won! ${humanChoice} beats ${computerChoice}.";
             } else {
@@ -93,7 +93,13 @@
         playRound(humanSelection, computerSelection);
 
         function playGame() {
+            let computerScore = 0
+            let humanScore = 0
             
+            console.log(getComputerChoice, getHumanChoice);
+
+            playRound(humanSelection, computerSelection);
+            console.log(playRound);
         }
 
     </script>
