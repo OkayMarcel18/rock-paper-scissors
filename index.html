@@ -19,14 +19,14 @@
             let randomizeChoice = Math.floor(Math.random() * compChoices.length) + 1;
 
             if (randomizeChoice === 1) {
-                return "rock";
                 let computerChoice = "rock";
+                return computerChoice;
             } if (randomizeChoice === 2) {
-                return "paper";
                 let computerChoice = "paper";
+                return computerChoice;
             } if (randomizeChoice === 3) {
-                return "scissors";
                 let computerChoice = "scissors";
+                return computerChoice;
             }
         }
         
@@ -45,6 +45,7 @@
                 let humanChoice = sign;
                 log.innerText = `You chose ${sign}.`
                 console.log(humanChoice);
+                return humanChoice;
             });
         }
         
