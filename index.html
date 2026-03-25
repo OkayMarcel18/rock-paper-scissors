@@ -36,18 +36,10 @@
         let humanChoice = null;
 
         function getHumanChoice() {
-            const signButton = document.querySelector("#signButton");
-            const log = document.querySelector("#log");
-
-            signButton.addEventListener("click", () => {
-                let sign = prompt("rock, paper, or scissors?");
-
                 let humanChoice = sign;
                 log.innerText = `You chose ${sign}.`
                 console.log(humanChoice);
-
-            });
-        }
+            };
         
         let humanScore = 0;
         let computerScore = 0;
