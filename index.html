@@ -42,18 +42,6 @@
             signButton.addEventListener("click", () => {
                 let sign = prompt("rock, paper, or scissors?");
 
-                if (sign === null) {
-                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                    return;
-                } 
-                
-                sign = sign.toLowerCase().trim();
-                
-                if (!humanChoices.includes(sign)) {
-                    log.innerText = "Invalid choice. Try rock, paper, or scissors.";
-                    return;
-                }
-                
                 let humanChoice = sign;
                 log.innerText = `You chose ${sign}.`
                 console.log(humanChoice);
