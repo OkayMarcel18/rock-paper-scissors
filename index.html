@@ -57,18 +57,21 @@
                 (humanChoice === "paper" && computerChoice === "paper") || 
                 (humanChoice === "scissors" && computerChoice === "scissors")) {
                     let roundWinner = "It's a tie!";
+                    console.log(roundWinner);
                     return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "paper") || 
                        (humanChoice === "paper" && computerChoice === "scissors") || 
                        (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore = computerScore + 1;
                             let roundWinner = `You lost! ${computerChoice} beats ${humanChoice}.`;
+                            console.log(roundWinner);
                             return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
                        (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore = humanScore + 1;
                             let roundWinner = `You won! ${humanChoice} beats ${computerChoice}.`;
+                            console.log(roundWinner);
                             return roundWinner;
             } else {
                 log.innerText = "";
