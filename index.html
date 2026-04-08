@@ -56,17 +56,20 @@
             if ((humanChoice === "rock" && computerChoice === "rock") || 
                 (humanChoice === "paper" && computerChoice === "paper") || 
                 (humanChoice === "scissors" && computerChoice === "scissors")) {
-                    log.innerText = "It's a tie!";
+                    let roundWinner = "It's a tie!";
+                    return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "paper") || 
                        (humanChoice === "paper" && computerChoice === "scissors") || 
                        (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore = computerScore + 1;
-                            log.innerText = `You lost! ${computerChoice} beats ${humanChoice}.`;
+                            let roundWinner = `You lost! ${computerChoice} beats ${humanChoice}.`;
+                            return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
                        (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore = humanScore + 1;
-                            log.innerText = `You won! ${humanChoice} beats ${computerChoice}.`;
+                            let roundWinner = `You won! ${humanChoice} beats ${computerChoice}.`;
+                            return roundWinner;
             } else {
                 log.innerText = "";
             }
@@ -86,6 +89,7 @@
             let humanScore = 0
             
             playRound(humanSelection, computerSelection);
+                return 
         }
 
     </script>
