@@ -32,10 +32,9 @@
         }        
 
         const humanChoices = ["rock", "paper", "scissors"];
-        let humanChoice = null;
 
         function getHumanChoice() { 
-            let humanChoice = prompt("rock, paper, or scissors?").toLowerCase();
+            let humanChoice = null;
 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
@@ -85,18 +84,18 @@
         function playGame() {
             humanScore = 0;
             computerScore = 0;
-            
+        
             const signButton = document.querySelector("#signButton");
             const log = document.querySelector("#log");
 
             signButton.addEventListener("click", () => {
-                let sign = prompt("rock, paper, or scissors?");
+                let humanChoice = prompt("rock, paper, or scissors?");
 
-                getComputerChoice();
-                getHumanChoice();
-            });
-            
-        }
+                playRound(humanSelection, computerSelection);
+                console.log()
+                
+            })
+        };
 
     </script>
 
