@@ -35,14 +35,13 @@
         let humanChoice = null;
 
         function getHumanChoice() { 
-            let sign = prompt("rock, paper, or scissors?");
+            let humanChoice = prompt("rock, paper, or scissors?");
 
-            let humanChoice = sign;
-            log.innerText = `You chose ${sign}.`
+            log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
             return humanChoice;
         }
-        
+
         let humanScore = 0;
         let computerScore = 0;
 
@@ -83,8 +82,8 @@
         // 3. Also ensure that getHumanChoice fires properly.
 
         function playGame() {
-            let computerScore = 0
-            let humanScore = 0
+            humanScore = 0;
+            computerScore = 0;
             
             const signButton = document.querySelector("#signButton");
             const log = document.querySelector("#log");
