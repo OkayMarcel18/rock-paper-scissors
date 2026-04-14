@@ -35,7 +35,7 @@
         let humanChoice = null;
 
         function getHumanChoice() { 
-            let humanChoice = prompt("rock, paper, or scissors?");
+            let humanChoice = prompt("rock, paper, or scissors?").toLowerCase();
 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
