@@ -37,7 +37,7 @@
         const humanChoices = ["rock", "paper", "scissors"];
 
         function getHumanChoice() { 
-            let humanChoice = null;
+            let humanChoice = prompt("rock, paper, or scissors?");
 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
@@ -52,6 +52,7 @@
                     let roundWinner = "It's a tie!";
                     console.log(computerChoice);
                     console.log(roundWinner);
+                    consooe.log(humanScore, computerScore);
                     return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "paper") || 
                        (humanChoice === "paper" && computerChoice === "scissors") || 
@@ -60,6 +61,7 @@
                             let roundWinner = `You lost! ${computerChoice} beats ${humanChoice}.`;
                             console.log(computerChoice);
                             console.log(roundWinner);
+                            console.log(humanScore, computerScore);
                             return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
@@ -68,6 +70,7 @@
                             let roundWinner = `You won! ${humanChoice} beats ${computerChoice}.`;
                             console.log(computerChoice);
                             console.log(roundWinner);
+                            console.log(humanScore, computerScore);
                             return roundWinner;
             } else {
                 log.innerText = "";
@@ -87,9 +90,6 @@
         function playGame() {
             humanScore = 0;
             computerScore = 0;
-        
-            const signButton = document.querySelector("#signButton");
-            const log = document.querySelector("#log");
 
             signButton.addEventListener("click", () => {
                 let humanChoice = prompt("rock, paper, or scissors?");
