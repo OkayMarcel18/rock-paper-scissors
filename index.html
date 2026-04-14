@@ -93,7 +93,10 @@
             const log = document.querySelector("#log");
 
             signButton.addEventListener("click", () => {
-            
+                let sign = prompt("rock, paper, or scissors?");
+
+                getComputerChoice();
+                getHumanChoice();
             });
             
         }
