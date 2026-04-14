@@ -36,7 +36,7 @@
         const humanChoices = ["rock", "paper", "scissors"];
 
         function getHumanChoice() { 
-            let humanChoice = prompt("rock, paper, or scissors?");
+            let humanChoice = prompt("rock, paper, or scissors?").toLowerCase();
 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
@@ -90,14 +90,11 @@
             humanScore = 0;
             computerScore = 0;
 
-            signButton.addEventListener("click", () => {
-                let humanChoice = prompt("rock, paper, or scissors?");
+            getcomupterChoice();
+            gethumanChoice();
 
-                playRound(humanSelection, computerSelection);
-                console.log()
-                
-            })
-        };
+            playRound(humanSelection, computerSelection);
+        }
 
     </script>
 
