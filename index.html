@@ -50,6 +50,7 @@
                 (humanChoice === "paper" && computerChoice === "paper") || 
                 (humanChoice === "scissors" && computerChoice === "scissors")) {
                     let roundWinner = "It's a tie!";
+                    console.log(computerChoice);
                     console.log(roundWinner);
                     return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "paper") || 
@@ -57,6 +58,7 @@
                        (humanChoice === "scissors" && computerChoice === "rock")) {
                             computerScore++;
                             let roundWinner = `You lost! ${computerChoice} beats ${humanChoice}.`;
+                            console.log(computerChoice);
                             console.log(roundWinner);
                             return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
@@ -64,6 +66,7 @@
                        (humanChoice === "scissors" && computerChoice === "paper")) {
                             humanScore++;
                             let roundWinner = `You won! ${humanChoice} beats ${computerChoice}.`;
+                            console.log(computerChoice);
                             console.log(roundWinner);
                             return roundWinner;
             } else {
