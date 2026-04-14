@@ -29,8 +29,7 @@
                 let computerChoice = "scissors";
                 return computerChoice;
             }
-        }
-        
+        }        
 
         const humanChoices = ["rock", "paper", "scissors"];
         let humanChoice = null;
@@ -47,9 +46,7 @@
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if ((humanChoice === "rock" && computerChoice === "rock") || 
-                (humanChoice === "paper" && computerChoice === "paper") || 
-                (humanChoice === "scissors" && computerChoice === "scissors")) {
+            if (humanChoice === computerChoice) {
                     let roundWinner = "It's a tie!";
                     console.log(computerChoice);
                     console.log(roundWinner);
