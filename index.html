@@ -30,7 +30,6 @@
             }
         }
         
-        console.log(getComputerChoice());
 
         const humanChoices = ["rock", "paper", "scissors"];
         let humanChoice = null;
@@ -57,17 +56,15 @@
             } else if ((humanChoice === "rock" && computerChoice === "paper") || 
                        (humanChoice === "paper" && computerChoice === "scissors") || 
                        (humanChoice === "scissors" && computerChoice === "rock")) {
-                            let computerScore = computerScore + 1;
-                            let roundWinner = `You lost! ${computerChoice} beats 
-                            ${humanChoice}.`;
+                            computerScore++;
+                            let roundWinner = `You lost! ${computerChoice} beats ${humanChoice}.`;
                             console.log(roundWinner);
                             return roundWinner;
             } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
                        (humanChoice === "paper" && computerChoice === "rock") || 
                        (humanChoice === "scissors" && computerChoice === "paper")) {
-                            let humanScore = humanScore + 1;
-                            let roundWinner = `You won! ${humanChoice} beats 
-                            ${computerChoice}.`;
+                            humanScore++;
+                            let roundWinner = `You won! ${humanChoice} beats ${computerChoice}.`;
                             console.log(roundWinner);
                             return roundWinner;
             } else {
