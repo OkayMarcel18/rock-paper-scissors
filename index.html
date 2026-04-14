@@ -35,18 +35,13 @@
         const humanChoices = ["rock", "paper", "scissors"];
         let humanChoice = null;
 
-        function getHumanChoice() {
-            const signButton = document.querySelector("#signButton");
-            const log = document.querySelector("#log");
+        function getHumanChoice() { 
+            let sign = prompt("rock, paper, or scissors?");
 
-            signButton.addEventListener("click", () => {
-                let sign = prompt("rock, paper, or scissors?");
-
-                let humanChoice = sign;
-                log.innerText = `You chose ${sign}.`
-                console.log(humanChoice);
-                return humanChoice;
-            });
+            let humanChoice = sign;
+            log.innerText = `You chose ${sign}.`
+            console.log(humanChoice);
+            return humanChoice;
         }
         
         let humanScore = 0;
@@ -85,16 +80,22 @@
 
         playRound(humanSelection, computerSelection);
 
-        // Currently debugging playGame and trying to get an event listener to
-        // fire the entire game. At the moment, it is only firing the getHumanChoice
-        // function. It needs more debugging.
+        // To-do:
+        // 1. Create eventListener that fires whole game.
+        // 2. Ensure the prompt doesn't fire on page load.
+        // 3. Also ensure that getHumanChoice fires properly.
 
         function playGame() {
             let computerScore = 0
             let humanScore = 0
             
-            playRound(humanSelection, computerSelection);
-                return 
+            const signButton = document.querySelector("#signButton");
+            const log = document.querySelector("#log");
+
+            signButton.addEventListener("click", () => {
+            
+            });
+            
         }
 
     </script>
