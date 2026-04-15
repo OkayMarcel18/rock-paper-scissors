@@ -93,6 +93,14 @@
             const humanChoice = getHumanChoice();
 
             playRound(humanChoice, computerChoice);
+
+            if (humanScore === 5) {
+                alert("You win! Reload page to play again.");
+            } else if (computerScore === 5 ) {
+                alert("Game over! Reload the page to play again.");
+            } else {
+                log.innerText = "";
+            }
         }
 
     </script>
