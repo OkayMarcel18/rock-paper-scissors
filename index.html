@@ -11,9 +11,12 @@
     <p>Hint: Your first choice counts!</p>
     <button id="signButton">Play</button>
     <pre id="log"></pre>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <button id="rockButton">Rock</button>
+    <pre id="rockLog"></pre>
+    <button id="paperButton">Paper</button>
+    <pre id="paperLog"></pre>
+    <pre id="scissorsLog"></pre>
+    <button id="scissorsButton">Scissors</button>
     <script>
         console.log("Hello World");
 
@@ -39,6 +42,10 @@
         }        
 
         const humanChoices = ["rock", "paper", "scissors"];
+
+        const rockButton = document.querySelector("#rockButton");
+        const log = document.querySelector("#log");
+        rockButton.addEventListener("click", getHumanChoice);
 
         function getHumanChoice() { 
             
