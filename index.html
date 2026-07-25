@@ -8,15 +8,18 @@
 <body>
     <h2>Play Rock Paper Scissors</h2>
     <p>Select an option below!</p>
-    <pre id="log"></pre>
     <button id="rockButton">Rock</button>
+    <pre id="rockLog"></pre>
     <button id="paperButton">Paper</button>
+    <pre id="paperLog"></pre>
     <button id="scissorsButton">Scissors</button>
+    <pre id="scissorsLog"></pre>
     <script>
         console.log("Hello World");
 
         const signButton = document.querySelector("#signButton");
         const log = document.querySelector("#log");
+        
         signButton.addEventListener("click", playGame);
 
         const compChoices = ["rock", "paper", "scissors"];
