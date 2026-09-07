@@ -50,11 +50,11 @@
         const scissorsLog = document.querySelector("#scissorsLog");
         scissorsButton.addEventListener("click", getHumanChoice);
 
-        function getHumanChoice() { 
-            rockButton.addEventListener("click", () => playGame("rock"));
-            paperButton.addEventListener("click", () => playGame("paper"));
-            scissorsButton.addEventListener("click", () => playGame("scissors"));
+        rockButton.addEventListener("click", () => playGame("rock"));
+        paperButton.addEventListener("click", () => playGame("paper"));
+        scissorsButton.addEventListener("click", () => playGame("scissors"));
 
+        function getHumanChoice() { 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
             return humanChoice;
