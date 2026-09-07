@@ -51,16 +51,9 @@
         scissorsButton.addEventListener("click", getHumanChoice);
 
         function getHumanChoice() { 
-          if (rockButton = "click") {
-            let humanChoice = "rock";
-            return humanChoice;
-          } if (paperButton = "click") {
-            let humanChoice = "paper";
-            return humanChoice;
-          } if (scissorsButton = "click") {
-            let humanChoice = "scissors";
-            return humanChoice;
-          }
+            rockButton.addEventListener("click", () => playGame("rock"));
+            paperButton.addEventListener("click", () => playGame("paper"));
+            scissorsButton.addEventListener("click", () => playGame("scissors"));
 
             log.innerText = `You chose ${humanChoice}.`
             console.log(humanChoice);
